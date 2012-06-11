@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - The COM Port Isn't Set Correctly</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">The COM Port Isn't Set Correctly</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="troubleshooting.html">Troubleshooting</a></li>
+  <li><a href="commonproblems.html">Common Problems</a></li>
+    <li class="me"><a href="#">The COM Port Isn't Set Correctly</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="commondb.html">Data Can't Be Read</a></li>
+  <li><a href="commondbadd.html">Data Is Not Being Saved</a></li>
+  <li><a href="commonstart.html">The Application Doesn't Start</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<h3>How to identify the problem</h3>
+	<p>If the application receives data from the COM port then the indicator in 
+	the bottom right-hand corner of the screen will flash. This indicates that 
+	the application has received a string of characters terminated by the 
+	newline character (ASCII code 13). On receipt of a new message the 
+	application will check it and attempt to process it. If there are any 
+	problems with the received message then it is rejected. Multiple rejections 
+	where the status light is flashing but without any new messages being added 
+	to the COM port window is indicative of the COM port being incorrectly 
+	configured.</p>
+<p>The problem is apparent when the raw data window is opened. The entries 
+	contained within it are garbled and not displayed correctly if the COM port 
+	is not set properly.</p>
+<h3>What causes the problem</h3>
+<p>Changes to the configuration either at the transmitting end or receiving end 
+of the transmission will lead to these types of problems.</p>
+<h3>How to fix it</h3>
+	<p>Changing the settings under Configuration &gt; COM Port Configuration will 
+	remedy the problem.</p>
+</div>
+</body>
+</html>

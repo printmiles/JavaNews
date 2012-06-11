@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - What You Should Check</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">What You Should Check</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li class="me"><a href="#">What You Should Check</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="commonproblems.html">Common Problems</a></li>
+  <li><a href="whattodo.html">What To Do With Problems</a></li>
+  <li><a href="whattosend.html">What Should You Send</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div><div class="content">
+<h3>The Database</h3>
+<p>Ensure that the database is correctly configured and has capacity for adding new records. It may be the case where the database needs to be altered to 
+allow more records to be stored. You might also find that the database would 
+benefit from being compacted which can increase performance and reduce the size 
+of the overall database.</p>
+<h3>The COM Ports</h3>
+<p>If you have configured JavaNews to work with a particular COM port then it will try to access this port every-time the application starts. Make sure that it is available in the Device Manager (or equivalent) before starting the application. 
+If you cannot get the COM port to work then ensure that you access the COM port 
+configuration and hit the Save button, even if you have not set any other COM 
+port to be monitored. This erases the configuration from the preferences file 
+and allows you to use the application on its own.</p>
+<h3>Network Drives</h3>
+<p>If you have specified that JavaNews should use a network drive or resource for the database or for log files then you must make sure that the network resource is available. If it is not then this will cause a problem as JavaNews expects to be able to access these resources and cannot work without them. If it is possible then try to use a location on the local machine for items like logging.</p>
+</div>
+</body>
+</html>

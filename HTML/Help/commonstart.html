@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - The Application Doesn't Start</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">The Application Doesn't Start</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="troubleshooting.html">Troubleshooting</a></li>
+  <li><a href="commonproblems.html">Common Problems</a></li>
+    <li class="me"><a href="#">The Application Doesn't Start</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="commoncomport.html">The COM Port Isn't Set Correctly</a></li>
+  <li><a href="commondb.html">Data Can't Be Read</a></li>
+  <li><a href="commondbadd.html">Data Is Not Being Saved</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<h3>How to identify the problem</h3>
+	<p>This can take on multiple forms because there are different problems that 
+	could prevent the application from working. If you are able to start the 
+	application and see the JavaNews window but not able to use particular 
+	features and functions as described in this help system then the problem 
+	could be fixed.</p>
+<h3>What causes the problem</h3>
+	<p>Multiple problems can cause the application from starting correctly or 
+	even at all. These can vary from changes in your Java installation to not 
+	being able to find the preferences file. The fixes below list simple steps 
+	to eliminate many of the possible problems that would prevent JavaNews from 
+	running correctly.</p>
+	<p>If you have installed JavaNews and then upgraded your version of Java 
+	runtime, this can stop the application from accessing the COM ports. This is 
+	caused by the libraries required by JavaNews not being copied over to the 
+	new version of Java, you can see how to resolve this in the add-ons section 
+	below.</p>
+<h3>How to fix it</h3>
+	<h4>Java installation (Automated installation)</h4>
+<p>The automated installation for JavaNews should ensure that everything
+is in the correct place before running the application. You may find that
+subsequent updates to your version of Java may cause JavaNews to report problems or
+not to function normally. You should refer to the information about installing JavaNews to
+copy the required libraries needed for the application to function properly. You 
+can find this information <a href="jninstall.html">here</a>.</p>
+	<h4>Java installation (Manual installation)</h4>
+	<p>You should ensure that Java is installed and that .jar files are 
+	associated with it to be able to double-click on the JavaNews.jar file in 
+	Windows Explorer (or similar). Some other applications also use the .jar 
+	file extension such as Nokia&#39;s PC Suite which associates the files with 
+	itself instead of Java.</p>
+	<p>You can create a .bat file to run a command line to navigate to the 
+	JavaNews.jar file and then call the command <code>java -jar JavaNews.jar</code> to 
+	run the application correctly.</p>
+	<p>If you are unable to run this command then you may need to amend your 
+	class-path to support this. There are plenty of resources on the internet on 
+	how to change this, search for &quot;how to set java classpath&quot;.</p>
+	<h4>Add-ons (RxTx &amp; JFreeChart)</h4>
+	<p>JavaNews is dependant on two add-ons to the standard Java libraries to 
+	provide the functions to draw charts for link statistics and accessing the 
+	COM ports. These add-ons are known as RxTx and JFreeChart and consist of 
+	various files. You should have installed these files during installation. If 
+	not then you should refer to the information about
+	<a href="javainstall.html">Installing Java</a>.</p>
+	<h4>Preference files</h4>
+	<p>The <code>javanews.prefs.xml</code> file is need to launch the application with your 
+	preferences such as the look and feel, the COM ports to monitor and their 
+	configuration. If this file is missing from your installation directory you 
+	can copy a new version from the installation CD. Your settings will revert 
+	to their defaults by doing this.</p>
+	<h4>Test port</h4>
+	<p>To use the test port a file must be placed within your installation 
+	directory called <code>OpenNewsSample.txt</code>. The name is case-sensitive and the
+	contents of the file must be text in the correct format from a PSE.</p>
+	<p>Due to the error handling and correction algorithms within the 
+	application, any text which is not considered to be a standard PSE message 
+	will be ignored and so not processed.</p>
+	<p>A default file has been included in the installation CD which has 
+	comments and some information that can be processed by the application. You 
+	can view the full contents of the file by opening it in an application like 
+	Notepad or similar.</p>
+	<h4>Database</h4>
+	<p>Issues with the database are covered <a href="commondb.html">here</a>.</p>
+</div>
+</body>
+</html>

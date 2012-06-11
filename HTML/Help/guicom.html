@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - COM Port Windows</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">COM Port Windows</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="run.html">Running JavaNews</a></li>
+  <li><a href="gui.html">The GUI</a></li>
+    <li class="me"><a href="#">COM Port Windows</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="guicomdata.html">Viewing Data</a></li>
+  <li><a href="guimain.html">The Main Window</a></li>
+  <li><a href="guiraw.html">Viewing Raw Data</a></li>
+  <li><a href="guichart.html">Viewing Statistics</a></li>
+  <li><a href="guirecord.html">Editing Records</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>JavaNews uses a separate window for each COM port that is being monitored. This is shown below, you can click on the image to enlarge it. 
+There are various items of use contained within the screen and this page 
+outlines all of them.</p>
+<div class="images">
+<a href="./resources/guicom-screen.png"><img alt="COM port window within the application" height="458" width="637"
+ src="./resources/guicom-screen.png"/></a>
+<p>The COM port window (Click to enlarge)</p>
+</div>
+	<h4>The Title-Bar</h4>
+	<p>The title-bar of the window (the text along the top of the window) shows 
+	the name of the COM port the window is monitoring and the settings used to 
+	connect to the port. This is in the format: baud rate - data bits - parity 
+	type - stop bits. Please note that the parity type is shown as the first letter of the type being used.</p>
+	<h4>The Menu-Bar</h4>
+	<p>The menu contains two items, File and View. Each of these have further 
+	option beneath them.</p>
+	<p>The File option allows for the current window to be closed and exited 
+	from. There is also an option to save the contents of the messages as 
+	displayed in the central section of the window to a Comma Separated Value 
+	(CSV) file. CSV files can be opened in many spreadsheet programs and are 
+	stored in plain text. If you select this option you will be prompted for a 
+	filename and location of where to store the new file.</p>
+	<p>The View option contains three options. The first to view the raw data 
+	received from the COM port prior to processing. This produces a new window 
+	to display the data and is covered in more detail <a href="guiraw.html">here</a>.</p>
+	<p>The other two options on the View menu allow for charts to be displayed 
+	showing statistics relating to the number and percentages of links in each 
+	of the three states. More information about these windows can be seen <a href="guichart.html">here</a>.</p>
+	
+	<h3>The Main Window</h3>
+	<p>The main part of the window is split into three vertical columns each 
+	with a different purpose. The left-hand column allows for reports to be 
+	generated. The central column shows messages received from the COM port. The 
+	right-hand column lists links and their status. This column is split into 
+	two to show those links and PSEs which have already been recognised and 
+	inputted into the database, shown at the top, and those new links which have 
+	been discovered while the application has been running.</p>
+	<h4>Reports</h4>
+	<p>The left-hand column shows reports that can be run within the database. 
+	There are two types of these, those by date or those on a particular link or 
+	PSE node. The lists of reports can be expanded like a directory in a file 
+	explorer, by clicking on the folders. The data reports will allow you to see 
+	all messages received within a certain timeframe from the moment you click 
+	on the report you require.</p>
+	<p>PSE and link reports can be run by finding the node you require from the 
+	alphabetical list and either clicking on the folder to run a report showing 
+	all messages received from all links configured on that node over all dates. 
+	Links are listed under their respective PSE node and will filter the results 
+	to those messages from that link on that PSE over all dates.</p>
+	<p>Report windows allow for the entries to be sorted, by clicking on the 
+	column headers, or exported by clicking on the Export Data item on the menu 
+	and then Save As CSV. This will save the displayed data in a Comma Separated 
+	Value format which can be accessed by many spreadsheet programs.</p>
+	<h4>Messages</h4>
+	<p>The messages column within the window shows a table containing all of the 
+	received messages since the application was launched. It does not show those 
+	messages in the database (these can be retrieved through the reports). The 
+	messages column can be a little cramped but the column headers can be 
+	adjusted to widen a column of importance or sort the entries within the 
+	table by clicking on it (clicking again will reverse sort the entries in the 
+	table by that column).</p>
+	<p>All of the information from a message can be seen by double-clicking on 
+	the message. This will give you the message window, more actions can be 
+	performed within this window which are covered <a href="guicomdata.html">here</a>.</p>
+	<h4>Links</h4>
+	<p>Both links which are stored within the database, that is recognised by 
+	the program, and newly discovered are shown on the right-hand side of the 
+	screen. This is intended to be an at-a-glance view of the state of the 
+	network that is being monitored. When the application is first launched all 
+	links are set to an unknown state. The program makes no assumptions on the 
+	state of a link unless it explicitly received a LINK UP or LINK DOWN 
+	message. At this point the link is changed to an up or down state. This is 
+	shown by a change of colour from GREY (unknown) to GREEN (link up) to RED 
+	(link down). The state column can be sorted to show those links as down at 
+	the top of the list. The list is updated dynamically so those which do 
+	change to down in a sorted list will jump to the top.</p>
+	<p>Links and PSEs that generate messages received on the COM port that have 
+	not previously been entered into the database will be shown in the bottom 
+	section of new or unrecognised links. Changes to the status of these links 
+	are also monitored.</p>
+	<p>You can also double-click on any link entry to view more information on that link and 
+	edit its entry in the database, add new links and acknowledge newly 
+	discovered links. More information on this can be found <a href="guirecord.html">here</a>.</p>
+</div>
+</body>
+</html>

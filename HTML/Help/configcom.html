@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Changing COM Port Configuration</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Changing COM Port Configuration</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="run.html">Running JavaNews</a></li>
+  <li><a href="config.html">Configuration</a></li>
+    <li class="me"><a href="#">Changing COM Port Configuration</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="configdb.html">Changing To Another Database</a></li>
+  <li><a href="configlnf.html">Changing The Look &amp; Feel</a></li>
+  <li><a href="configlog.html">Changing The Logging Level</a></li>
+  <li><a href="configthread.html">Viewing monitored ports</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>The COM ports used by JavaNews can be set and configured using this screen. It is accessible through the Configuration menu and is listed as
+&quot;COM Port Config&quot;. By using this screen you are able to:</p>
+	<ul>
+		<li>Specify which COM ports should be monitored for incoming PSE messages</li>
+		<li>Configure the settings to be used on the port</li>
+		<li>Enable or disable the test port (shown as COM99)</li>
+	</ul>
+	<div class="centered">
+		<img alt="The COM Port configuration screen" height="223" src="resources/configcom-screen.png" width="558" /></div>
+	<p>You can specify which ports to monitor by clicking on the check box on 
+	the left-hand side to toggle whether the port will be monitored. The &quot;in 
+	use?&quot; column shows whether the port is being used by another application. 
+	The port must be free before it can be used by JavaNews.</p>
+	<p>The values for baud rate, data bits, parity type and stop bits can be 
+	chosen from drop-down boxes. This ensures that invalid values cannot be 
+	entered into the application.</p>
+	<p>Once you have made any changes, click on Save to store the settings in 
+	the preferences file for future reference. Any ports that you have chosen to 
+	monitor that weren&#39;t previously open will have a corresponding window open 
+	in the main application window.</p>
+	<h3>Using the test port</h3>
+	<p>The test port within the application can be enabled by checking the box 
+	next to the entry named COM99. The other settings for this port are ignored.</p>
+	<p>The test port reads the contents of the <strong><code>OpenNewsSample.txt</code></strong> file that is 
+	contained within the root installation directory of JavaNews. The port reads 
+	all of the lines of the file and then feeds them to the application as if it 
+	were a genuine COM port. This can be used for testing whether a PSEs output 
+	will be accepted by the application following configuration changes, updates 
+	or other changes.</p>
+</div>
+</body>
+</html>

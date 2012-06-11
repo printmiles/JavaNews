@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Viewing Statistics</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Viewing Statistics</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="run.html">Running JavaNews</a></li>
+  <li><a href="gui.html">The GUI</a></li>
+    <li class="me"><a href="#">Viewing Statistics</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="guicom.html">COM Port Windows</a></li>
+  <li><a href="guicomdata.html">Viewing Data</a></li>
+  <li><a href="guimain.html">The Main Window</a></li>
+  <li><a href="guiraw.html">Viewing Raw Data</a></li>
+  <li><a href="guirecord.html">Editing Records</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>The screen shown below is the same for both recognised (known) links to the database and new (discovered) links while the
+application is running. The window incorporates a number of features which are discussed below.</p>
+<div class="images">
+<img src="./resources/guichart-screen.png" alt="Charts showing link state statistics"/>
+</div>
+<div class="warning"><p>The charts only record those events from the moment the window is opened.</p>
+<p>The chart on the right-hand side (showing historical data) will be blank until a link changes state.
+This is because the chart only has one point to start with an requires a second data point to draw a line between them.
+Points are added when a LINK UP or LINK DOWN message is received.</p></div>
+<p>The image shows two charts one pie chart, showing the current number of links and their states, and a line chart, showing
+past changes in the values of link states.</p>
+	<p>You are able to hove the mouse over items shown in either chart to 
+	display more detail. The above screenshot shows the tool-tip when the mouse 
+	hovers over the Link Up section of the pie chart. The detail shows the name 
+	of the item you&#39;re hovering on, the actual value and the percentage of all 
+	values it composes.</p>
+	<p>The line chart operates in a similar way with the bottom axis 
+	representing time. This allows for the time and date of peaks and troughs to 
+	be shown in the tool-tip when the mouse is hovered over a data point on the 
+	chart. Further options are displayed if you right-click on either of the 
+	graphs. These options allow you to alter the axes of the chart, the title 
+	and print the chart itself or save it as a Portable Network Graphics (PNG) 
+	file.</p>
+</div>
+</body>
+</html>

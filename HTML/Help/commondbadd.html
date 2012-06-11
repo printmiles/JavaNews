@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Data Is Not Being Saved</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Data Is Not Being Saved</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="troubleshooting.html">Troubleshooting</a></li>
+  <li><a href="commonproblems.html">Common Problems</a></li>
+    <li class="me"><a href="#">Data Is Not Being Saved</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="commoncomport.html">The COM Port Isn't Set Correctly</a></li>
+  <li><a href="commondb.html">Data Can't Be Read</a></li>
+  <li><a href="commonstart.html">The Application Doesn't Start</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<h3>How to identify the problem</h3>
+<p>Messages received during one session are not displayed on a query in another 
+which should result in the messages being shown.</p>
+<h3>What causes the problem</h3>
+<p>There are multiple problems that can cause this to happen, the common point 
+of these is the database. The application can be prevented from saving data 
+either because the database won&#39;t allow the application to connect or the 
+database doens&#39;t exist or has been moved.</p>
+<h3>How to fix it</h3>
+<p>As the problems relate to the database then checking the configuration of the 
+ODBC data source name will verify and hopefully resolve the cause of the 
+problem. The information <a href="odbc.html">here</a> can be used to check the 
+ODBC configuration. You may need to enter a user name and password to access the 
+database (these aren&#39;t required for the database supplied with the application).</p>
+</div>
+</body>
+</html>

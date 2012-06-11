@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Installing Java</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Installing Java</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="installing.html">Installing JavaNews</a></li>
+    <li class="me"><a href="#">Installing Java</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="quickinstall.html">Quick Installation</a></li>
+  <li><a href="dbtypes.html">Supported Database Types</a></li>
+  <li><a href="ostypes.html">Supported Operating Systems</a></li>
+  <li><a href="jninstall.html">Installing The Application</a></li>
+  <li><a href="shortcuts.html">Creating Shortcuts</a></li>
+  <li><a href="uninstall.html">Uninstalling JavaNews</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>JavaNews has been designed and built in the Java language. It makes use of features implemented in Java Standard Edition 
+(SE) v1.6.0 and higher. A copy of Java has been included for ease in the program 
+directory, this is the 1.6.0 update 11 release. Newer releases can be found at
+<a href="http://www.java.com/en/download/">Java.com</a>.</p>
+<p>The installation of the Java SE runtime edition is straight-forward and you should just follow the on-screen instructions and accept
+the default settings where needed (you may want to change default installation path). Once complete it is recommended to restart the PC
+to ensure that the system has been updated correctly.</p>
+	<h3>Add-on libraries</h3>
+	<p>In order for JavaNews to function correctly you must install two add-ons 
+	to the standard Java libraries. These add-ons are RxTx and JFreeChart which 
+	have been written by 3rd parties. More information about both of these 
+	add-ons can be found both in the Bibliography and Licensing information 
+	pages that can be found in the menu on the right.</p>
+	<div class="warning"><p>If you use the automated installation you will not need to manually install these files.</p></div>
+	<p>During the installation of Java you should noted which installation 
+	directory is used for the new version (for Windows platforms this should be along the lines of <code>C:\Program Files\Java\jrexxxx</code>,
+	where xxxx is the version being installed).</p>
+	<p>Within the Java installation directory you should find the <code>\lib\ext</code> folder and 
+	the <code>\bin</code> folder. These are the two directories used to install add-on libraries. 
+	You can find the files that require copying into these locations in the 
+	<code>Libraries</code> folder on the JavaNews installation CD. The library 
+	files section below lists the files, their purpose and which folder they 
+	should be copied to.</p>
+	<h3>Installing newer versions of Java</h3>
+	<p>If you need to update your installed version of Java to a newer version, 
+	you must ensure that all of the add-on files are copied to their respective 
+	folders to ensure that JavaNews works with the new version of Java.</p>
+	<div class="warning"><p>Installing a new version of Java will not automatically move add-on libraries to the new version.</p></div>
+	<h4>Library files</h4>
+	<p>These are the files required for the add-ons. The column &quot;Must Be Located 
+	In&quot; shows which folder within your Java installation the folder the file 
+	should be placed in. So, if your version of Java is located in <code>C:\Program Files\Java\jre1.6.0_11\</code>
+	then the file <code>rxtxSerial.dll</code> should be placed in the folder <code>C:\Program Files\Java\jre1.6.0_11\bin\</code>:</p>
+<table style="width: 100%">
+	<tr class="tableheader">
+		<td>File Name</td>
+		<td>Part Of</td>
+		<td>Purpose</td>
+		<td>Must Be Located In</td>
+	</tr>
+	<tr>
+		<td><code>rxtxParallel.dll</code></td>
+		<td>RxTx</td>
+		<td>Allows access to parallel ports in Microsoft Windows</td>
+		<td><code>.\bin</code></td>
+	</tr>
+	<tr>
+		<td><code>rxtxSerial.dll</code></td>
+		<td>RxTx</td>
+		<td>Allows access to serial (COM) ports in Microsoft Windows</td>
+		<td><code>.\bin</code></td>
+	</tr>
+	<tr>
+		<td><code>RXTXcomm.jar</code></td>
+		<td>RxTx</td>
+		<td>The libraries for RxTx to work with Java</td>
+		<td><code>.\lib\ext</code></td>
+	</tr>
+	<tr>
+		<td><code>jcommon-1.0.12.jar</code></td>
+		<td>JFreeChart</td>
+		<td>Provides text and utility classes as a foundation for the charting 
+		classes</td>
+		<td><code>.\lib\ext</code></td>
+	</tr>
+	<tr>
+		<td><code>jfreechart-1.0.9.jar</code></td>
+		<td>JFreeChart</td>
+		<td>Provides the graphing and charting classes required for JFreeChart</td>
+		<td><code>.\lib\ext</code></td>
+	</tr>
+</table>
+<h3>If you are using a prior version of Java</h3>
+<p>You can install a new version of Java into a different folder from the earlier installation. If problems arise during execution then you should uninstall
+both versions and reinstall the newer, however this is unlikely.</p>
+<h3>If you are using Microsoft JVM or a Virtual Machine from another manufacturer</h3>
+<p>You must install the Sun Java SE Runtime. The Virtual Machine used by Sun contains the whole Java specification and other manufacturers can prove incompatible with native code.</p>
+</div>
+</body>
+</html>

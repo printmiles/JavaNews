@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - ODBC</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">ODBC</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="installing.html">Installing JavaNews</a></li>
+  <li><a href="dbtypes.html">Supported Database Types</a></li>
+  <li class="me"><a href="#">ODBC</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="otherdbtypes.html">Other Database Types</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>ODBC stands for Open DataBase Connectivity and is used in some operating systems to provide a common means to access a variety of database types.</p>
+<p>Editing data source names (DSNs) can be performed through the ODBC panel. In Windows XP and Vista this can be found in the Administrative Tools panel.
+You can usually access this either through the Start Menu or through the Control Panel. You may need administrative rights to access the control panel and the ODBC page.</p>
+	<p>The process of configuring and editing DSNs is shown below as a 
+	step-by-step guide.</p>
+<h3>Configuring &amp; Editing DSNs</h3>
+<table>
+	<tr>
+		<td><p>
+		Once you have located the ODBC data source panel, double click on the 
+		shortcut and you will be presented with a list of different types of 
+		DSNs (User, System and File) and tabs to install other ODBC drivers and 
+		perform some configuration. These are not important to us and you should 
+		make sure that the User DSN tab is highlighted. This will show a listing 
+		of those DSNs you have configured, as well as those configured by the 
+		system on your behalf.</p><p>
+				If you have already configured a link to the JavaNews database 
+				then it will be listed here. You can click on its name in the 
+				list and &quot;Configure&quot; to change its settings.</p>
+				<p>
+				If you have not configured a DSN to the JavaNews database then 
+				click on &quot;Add&quot;.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step1.png"><img alt="Configuring ODBC: Step 1" height="194" longdesc="The ODBC configuration window" src="./resources/odbc-step1.png" width="236"/></a>
+		      The ODBC configuration window. (Click to enlarge)
+		    </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>You will see a list of the different drivers already installed on your machine. These maybe in different languages but find the driver you require in the list in your native language.</p>
+		<p>There is a blank copy of a Microsoft Access database included in the JavaNews 
+		directory. If you wish to use this, select &quot;Microsoft Access Driver (*.mdb)&quot; 
+		from the list.</p>
+				<p>Click on Finish when you are ready to proceed.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step2.png"><img alt="Configuring ODBC: Step 2" height="178" longdesc="ODBC driver list" src="./resources/odbc-step2.png" width="239" /></a>
+		      Available ODBC drivers. (Click to enlarge)
+		    </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>If you are using the blank database included in the JavaNews 
+		installation folder then you will be presented with the Microsoft Access 
+		setup window (shown). Otherwise you will be presented with a similar 
+		window for your chose database type.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step3.png"><img alt="Configuring ODBC: Step 3" height="159" longdesc="Entering the database specific details" src="./resources/odbc-step3.png" width="241" /></a>
+		      Entering database details. (Click to enlarge)
+		    </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>In most cases you will need to provide a name and description of the database you are connecting to. The name you give here is the one which needs to be entered into JavaNews as shown later.</p>
+				<p>Once you have done this, and you are using the supplied 
+				Microsoft Access database then click on &quot;Select...&quot;</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step4.png"><img alt="Configuring ODBC: Step 4" height="159" longdesc="Enter a name and description of the database" src="./resources/odbc-step4.png" width="241" /></a>
+		      Enter a name and description. (Click to enlarge)
+		      </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>You will need to locate the JavaNews.mdb file which is located in 
+		the JavaNews installation directory. Select the database file and click 
+		on OK to proceed.</p>
+				</td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step5.png"><img alt="Configuring ODBC: Step 5" height="127" longdesc="Select the database file" src="./resources/odbc-step5.png" width="206" /></a>
+		      Select the database file. (Click to enlarge)
+		      </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>Ensure that all of the information is correct before clicking on OK to save the DSN and add it to the list of configured data sources.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step6.png"><img alt="Configuring ODBC: Step 6" height="159" longdesc="Check the information before saving" src="./resources/odbc-step6.png" width="241" /></a>
+		      Check the information before saving. (Click to enlarge)
+		      </li>
+		  </ul>
+		</td>
+	</tr>
+	<tr>
+		<td><p>Once configured correctly the DSN will be listed in the Data Sources window. You can now use this database with JavaNews.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/odbc-step7.png"><img alt="Configuring ODBC: Step 7" height="194" longdesc="New DSN in the ODBC window" src="./resources/odbc-step7.png" width="236" /></a>
+		      New DSN in the ODBC window. (Click to enlarge)
+		      </li>
+		  </ul>
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

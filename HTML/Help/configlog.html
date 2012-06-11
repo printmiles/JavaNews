@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Changing The Logging Level</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Changing The Logging Level</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="run.html">Running JavaNews</a></li>
+  <li><a href="config.html">Configuration</a></li>
+    <li class="me"><a href="#">Changing The Logging Level</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="configcom.html">Changing COM Port Configuration</a></li>
+  <li><a href="configdb.html">Changing To Another Database</a></li>
+  <li><a href="configlnf.html">Changing The Look &amp; Feel</a></li>
+  <li><a href="configthread.html">Viewing monitored ports</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>The logging system in JavaNews will output details based on errors and events encountered within the application code. 
+The different entries into the logs are given varying levels of severity based 
+on how important they are. These are listed below in descending importance (the 
+more important ones are at the top and less so are at the bottom):</p>
+	<ol>
+		<li>Severe</li>
+		<li>Warning</li>
+		<li>Info</li>
+		<li>Config</li>
+		<li>Fine</li>
+		<li>Finer</li>
+		<li>Finest</li>
+	</ol>
+	<p>JavaNews uses all of the above levels when logging events and this can 
+	give a detailed log of what is happening within the application which is 
+	useful for debugging when something goes wrong.</p>
+	<h3>Logging levels</h3>
+	<p>Within the configuration menu the level of all the logging levels can be 
+	set by selecting the desired level from the list.</p>
+	<div class="centered">
+	<img alt="Configuration menu showing the logging options" height="230" src="resources/configlog-menu.png" width="287" />
+	</div>
+	<p>By selecting an entry from the menu you will set the loggers to record any events at that level and those that are higher in the list.
+	This would mean that if you set the level to Config any Severe, Warning, Info and Config level events would be stored in the log files.</p>
+	<p>The current level is show with a black diamond (using the Nimbus Look and 
+	Feel) or similar next to the level name.</p>
+	<h3>When the changes take effect</h3>
+	<p>As the loggers are a core part of the application it is not possible to 
+	change them &quot;on the fly&quot;. The changes are stored in the preferences file and 
+	will take effect the next time the application is started.</p>
+	<div class="warning"><p>The application must be restarted before a change of the logging level takes effect.</p></div>
+</div>
+</body>
+</html>

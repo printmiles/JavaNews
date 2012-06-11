@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Preference Files</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Preference Files</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="appendices.html">Appendices</a></li>
+    <li class="me"><a href="#">Preference Files</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="appendixlogs.html">Log Files</a></li>
+  <li><a href="jnfixer.html">JNFixer</a></li>
+  <li><a href="technicalinfo.html">Technical Information</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>Preference files are used by Java applications to store information about settings and preferences defined by the user for a particular application. JavaNews uses a single file called javanews.prefs.xml</p>
+<p>Entries within the preference file are organised within a tree and all of the entries for JavaNews can be found grouped together under a particular branch.</p>
+<p>The entries for JavaNews are all stored in plain-text so the XML file can be opened like any other. JavaNews uses many different entries but of particular importance are:</p>
+<table>
+	<tr class="tableheader">
+		<td>Entry ID</td>
+		<td>Purpose</td>
+	</tr>
+	<tr>
+		<td>javanews.lnf</td>
+		<td>The look and feel to be used for the application.</td>
+	</tr>
+	<tr>
+		<td>javanews.logLevel</td>
+		<td>The level of events to be included in log files created by JavaNews.</td>
+	</tr>
+	<tr>
+		<td>javanews.dir.Log</td>
+		<td>The directory where log files should be placed.</td>
+	</tr>
+	<tr>
+		<td>javanews.dsn.name</td>
+		<td>The name of the database to connect to. If you are using ODBC then this should be the DSN name.</td>
+	</tr>
+	<tr>
+		<td>javanews.comPort.numberToMonitor</td>
+		<td>The number of COM ports being monitored by the application. This is used to retrieve the rest of the COM port settings.</td>
+	</tr>
+	<tr>
+		<td>javanews.x.name</td>
+		<td>The name of the COM port to connect to. The x in the ID is replaced 
+		by a number which is zero-indexed.</td>
+	</tr>
+	<tr>
+		<td>javanews.x.baud</td>
+		<td>The baud rate of the COM port that JavaNews should connect to.</td>
+	</tr>
+	<tr>
+		<td>javanews.x.parity</td>
+		<td>The parity type of the COM port.</td>
+	</tr>
+	<tr>
+		<td>javanews.x.data</td>
+		<td>The data bit length of the COM port.</td>
+	</tr>
+	<tr>
+		<td>javanews.x.stop</td>
+		<td>The stop bit length of the COM port.</td>
+	</tr>
+</table>
+<h3>More Information</h3>
+<ul>
+<li><a href="http://java.sun.com/dtd/preferences.dtd">Preferences DTD</a> - The definition of preference XML files.</li>
+</ul>
+</div>
+</body>
+</html>

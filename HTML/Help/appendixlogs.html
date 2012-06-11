@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Log files</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Log Files</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="appendices.html">Appendices</a></li>
+    <li class="me"><a href="#">Log Files</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="appendixprefs.html">Preference Files</a></li>
+  <li><a href="jnfixer.html">JNFixer</a></li>
+  <li><a href="technicalinfo.html">Technical Information</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>Within the application you need to set a logging directory along with a logging level.
+While the application runs it generates events. These can range in severity and normally don't need to be
+seen. However, if there are problems while running the application then the log files are useful to finding
+exactly what the problems is and where it lies. You should make the logging directory used by the application 
+somewhere that is easy to locate and is always available (avoid using network 
+drives if they might not be available).</p>
+<h3>Organisation of the Files</h3>
+<p>If you were to look into the log directory, the first reaction might be "there's an awful lot of files in there",
+or, "it looks complicated, I'll leave it alone".</p>
+<p>Each of the files contained within the directory represent a particular 
+class within the application. A class can be thought of as a chunk of code 
+responsible for a set of tasks within the application as a whole. The log 
+files for JavaNews can be distinguished from other XML files from the fact 
+that they end .log.xml.</p>
+<p>All of the .log.xml are named after a fully qualified package and class 
+name followed by a sequential number for conflicts. For JavaNews all of the 
+packages are in the javanews package. 
+This forms a common start for all of the file names. After this is the next 
+sub-package name and the class name, separated by a full-stop (for example 
+javanews.gui.Client is the Client class
+within the gui package within the application). The sub-packages are organised
+as follows:</p>
+<table>
+	<tr class="tableheader">
+		<td>Name</td>
+		<td>Purpose</td>
+		<td>Qualified Name</td>
+	</tr>
+	<tr>
+		<td>database</td>
+		<td>Used to hold classes used to connect to or work with the back-end database through JDBC and/or SQL.</td>
+		<td>.database</td>
+	</tr>
+	<tr>
+		<td>events</td>
+		<td>Used to hold event classes used to perform actions within the application.</td>
+		<td>.events</td>
+	</tr>
+	<tr>
+		<td>gui (Subclass of events)</td>
+		<td>Used to hold GUI events triggered from the user working with the application.</td>
+		<td>.events.gui</td>
+	</tr>
+	<tr>
+		<td>table (Subclass of events)</td>
+		<td>Used to hold data events relating to tables and the data within them being changed.</td>
+		<td>.events.table</td>
+	</tr>
+	<tr>
+		<td>gui</td>
+		<td>Used to hold the major GUI classes. Mainly the main application window and the splash screen shown during start-up.</td>
+		<td>.gui</td>
+	</tr>
+	<tr>
+		<td>internalframe (Subclass of gui)</td>
+		<td>Used to hold the classes of windows shown within the main application window. These include configuration, help and data windows.</td>
+		<td>.gui.internalframe</td>
+	</tr>
+	<tr>
+		<td>object</td>
+		<td>Used to hold objects commonly used by other classes within the application.</td>
+		<td>.object</td>
+	</tr>
+	<tr>
+		<td>print (Subclass of object)</td>
+		<td>Used to hold classes required specifically for printing.</td>
+		<td>.object.print</td>
+	</tr>
+	<tr>
+		<td>table (Subclass of object)</td>
+		<td>Used to hold classes used to hold and display data within tables so they can be displayed on-screen.</td>
+		<td>.object.table</td>
+	</tr>
+	<tr>
+		<td>run</td>
+		<td>Used to hold classes needed to start the application.</td>
+		<td>.run</td>
+	</tr>
+</table>
+<p>For more information about the purposes of each class within the 
+application, you can refer to the <a href="./javadoc/index.html">Javadoc</a>.</p>
+<h3>Viewing the Files</h3>
+<p>The log files are also used to record any messages received from the PSE network and can be found in some 
+of the files within the log directory. If you use a file browser to explore the 
+logging directory you will see many different files. They can be opened in any application that recognises XML 
+content. Microsoft&#39;s Excel is good for compiling multiple XML files, while 
+Apache Chainsaw is able to view log files as well.</p>
+<p>The document type definition (DTD) for log files can be viewed on the Sun 
+Microsystems website and it gives information about the contents of the XML 
+file and the purpose for each of the fields.</p>
+<h4>Microsoft Excel</h4>
+<table>
+	<tr>
+		<td><p>Excel allows for records to be imported and then sorted and filtered using tools familiar to most.</p>
+		<p>Multiple files must be manually cut and paste into a single file to follow the program execution.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/appendixlogs-ExcelShot.png"><img alt="Excel screenshot" height="243" longdesc="Excel shown viewing an XML log file from JavaNews" src="./resources/appendixlogs-ExcelShot.png" width="320" /></a>
+		      Log files open in Microsoft Excel. (Click to enlarge)
+            </li>
+          </ul>
+		</td>
+	</tr>
+</table>
+<h4>Apache Chainsaw</h4>
+<table>
+	<tr>
+		<td><p>Apache chainsaw allows for XML log files to be viewed and sorted similar to Excel. However, it does have problems accessing large files.</p></td>
+		<td class="images">
+		  <ul>
+		    <li>
+		      <a href="./resources/appendixlogs-ChainsawShot.png"><img alt="Apache Chainsaw screenshot" height="243" longdesc="Excel shown viewing an XML log file from JavaNews" src="./resources/appendixlogs-ChainsawShot.png" width="320" /></a>
+		      Apache Chainsaw log file viewer. (Click to enlarge)
+		    </li>
+		  </ul>
+		</td>
+	</tr>
+</table>
+<h4>Other Applications</h4>
+<p>Other applications can be used to open XML files, notepad is one and all will display the content of these text
+based files. For more information on the information contained within a log file, refer to the DTD at the Sun site.</p>
+<h3>More Information</h3>
+<ul>
+<li><a href="http://logging.apache.org/chainsaw/">Apache Chainsaw</a> - An open source log file viewer.</li>
+<li><a href="http://java.sun.com/dtd/logger.dtd">Logger DTD</a> - The definition of logger XML files.</li>
+</ul>
+</div>
+</body>
+</html>

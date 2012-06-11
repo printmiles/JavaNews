@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+<preferences EXTERNAL_XML_VERSION="1.0">
+  <root type="user">
+    <map/>
+    <node name="javanews">
+      <map/>
+      <node name="object">
+        <map>
+          <entry key="javanews.lnf" value="javax.swing.plaf.metal.MetalLookAndFeel"/>
+          <entry key="javanews.logLevel" value="Off"/>
+          <entry key="javanews.dir.Log" value="C:\Javanews\"/>
+          <entry key="javanews.comPort.numberToMonitor" value="1"/>
+          <entry key="javanews.dsn.name" value="JavaNewsDB"/>
+          <entry key="javanews.db.type" value="odbc"/>
+          <entry key="javanews.comPort.0.name" value="COM99"/>
+          <entry key="javanews.comPort.0.baud" value="9600"/>
+          <entry key="javanews.comPort.0.data" value="8"/>
+          <entry key="javanews.comPort.0.parity" value="None"/>
+          <entry key="javanews.comPort.0.stop" value="1.0"/>
+          <entry key="javanews.comPort.9.name" value="COM9"/>
+          <entry key="javanews.comPort.9.baud" value="9600"/>
+          <entry key="javanews.comPort.9.data" value="8"/>
+          <entry key="javanews.comPort.9.parity" value="None"/>
+          <entry key="javanews.comPort.9.stop" value="1.0"/>
+          <entry key="javanewsw.dsn.name" value="JavaNewsDB"/>
+        </map>
+      </node>
+    </node>
+  </root>
+</preferences>

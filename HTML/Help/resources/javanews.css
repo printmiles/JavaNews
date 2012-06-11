@@ -1,0 +1,183 @@
+﻿/*******************************************************/
+/* JavaNews CSS File for HTML documentation            */
+/* Created by: Alex Harris                             */
+/* Created: 7th Feb 2009                               */
+/* Modified: 6th May 2009                              */
+/* Version: 1.4                                        */
+/*******************************************************/
+html {
+	background-image: url(jnBackground.png);
+	background-position: 98% 98%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0;
+}
+.title {
+	border-bottom: 1px dotted #97caca;
+	border-top: 3px solid #339999;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: #339999;
+	vertical-align: bottom;
+}
+.subtitle {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.25em;
+	color: #97caca;
+	position: absolute;
+	top: 110px;
+	left: 1em;
+}
+.copyright {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: right;
+	color: #666666;
+	position: absolute;
+	top: 110px;
+	right: 1em;
+}
+.content {
+	padding: 10px 25px 10px 25px;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 0.75em;
+	font-weight: normal;
+	margin-left: 2em;
+	margin-right: 20em;
+	position: relative;
+	top: 3em;
+}
+.content table {
+	width: 100%;
+	border: 2px solid #dddddd;
+	border-collapse: collapse;
+}
+.content table td {
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	border-left: 2px solid #dddddd;
+	border-right: 2px solid #dddddd;
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+	vertical-align: top;
+}
+.content h3 {
+	font-size: 1.5em;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-weight: bold;
+	color: #339999;
+	border-bottom: 1px #339999 solid;
+}
+.content h4 {
+	padding-left: 5px;
+	font-size: 1.0em;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-weight: bold;
+	color: #97caca;
+	border-bottom: 1px #97caca dotted;	
+}
+.content a:link {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	color: #339999;
+	background-color: transparent;
+}
+.content a:visited {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	color: #97caca;
+	background-color: transparent;
+}
+.content a:hover, .content a:active {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	color: #ffffff;
+	background-color: #339999;
+}
+.tableheader {
+	text-align: center;
+	font-weight: bold;
+}
+.images li, .images p {
+	display: inline-block;
+	float: right;
+	margin: 10px 10px 10px 10px;
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-weight: bold;
+	color: #97caca;
+	list-style-type: none;
+	font-size: 0.9em;
+	text-align: right;
+}
+.images img, .images a {
+	display: block;
+	padding: 1em 2em 1em 2em;
+}
+.images a:active, .images a:hover, .images a:visited, .images a:link {
+	background-color: transparent;
+	color: white;	
+}
+.nav {
+	position: absolute;
+	top: 150px;
+	right: 1em;
+	width: 14em;
+}
+.nav ul {
+	list-style: none;
+	margin-left: 1em;
+	padding-left: 0;
+}
+.nav li {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 0.8em;
+	border-bottom: 1px dotted #97caca;
+	margin-bottom: 0.3em;
+}
+.nav a:link, .nav a:visited {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	text-decoration: none;
+	color: #339999;
+	background-color: transparent;
+}
+.nav a:hover, .nav a:active {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	color: #ffffff;
+	background-color: #97caca;
+}
+.nav h2 {
+	font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 110%;
+	color: #339999;
+	background-color: transparent;
+	border-bottom: 1px solid #339999;
+}
+.me a:link, .me a:visited, .me a:hover, .me a:active{
+	color: #999999;
+	font-weight: bold;
+	border-bottom: none;
+	background-color: #ffffff;
+}
+.centered {
+	text-align: center;
+}
+.clearBackground a{
+	background-color: #ffffff;
+	color: #ffffff;
+	border: none;
+}
+.warning
+{
+	background-color:#FFFF66;
+	color: #000000;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	border: 3px black dashed;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}

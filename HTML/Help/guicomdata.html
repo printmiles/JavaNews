@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - Viewing Data</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">Viewing Data</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="run.html">Running JavaNews</a></li>
+  <li><a href="gui.html">The GUI</a></li>
+    <li class="me"><a href="#">Viewing Data</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="guicom.html">COM Port Windows</a></li>
+  <li><a href="guimain.html">The Main Window</a></li>
+  <li><a href="guiraw.html">Viewing Raw Data</a></li>
+  <li><a href="guichart.html">Viewing Statistics</a></li>
+  <li><a href="guirecord.html">Editing Records</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>In the window for each COM port being monitored you will find that information is summarised within three
+tables. These tables are split across the screen in the center and right-hand sides:</p>
+<h4>Received messages (center)</h4>
+<p>This contains a summary of information about the messages received on a COM port. This summary includes (from left to right):</p>
+<ul>
+	<li>The severity of the message</li>
+	<li>The name of the PSE that generated the message</li>
+	<li>The identifier of the link on the named PSE that generated the message</li>
+	<li>The message contents that have been received</li>
+	<li>The date, according to the PSE, when the message was sent</li>
+	<li>The unique identifier of the message within the application</li>
+</ul>
+<h4>Recognised links (top-right)</h4>
+<p>This contains the name of the PSE and link ID for each of the recognised links along with its current status displayed as a colour:</p>
+<ul>
+	<li><strong>Grey</strong> - Link state unknown: A message has not been 
+	received that explicitly mentions the links state. PSE nodes themselves will 
+	stay in this state.</li>
+	<li><strong>Red</strong> - Link down: A message has been received that 
+	specifically mentions this link as being down (LINK DOWN).</li>
+	<li><strong>Green</strong> - Link up: A LINK UP message has been received 
+	explicitly stating that the link is up and ready.</li>
+</ul>
+<h4>Discovered links (bottom-right)</h4>
+<p>This displays the same information as for recognised links. However a link which has sent a message to this COM port which isn't known
+in the recognised links table will be entered here. You can &quot;acknowledge&quot; 
+discovered links which moves them into the recognised table and allows you to 
+run reports on them. For more information on how to do this, click <a href="guirecord.html">here</a>.</p>
+<h3>Detailed information</h3>
+<p>You are able to view details of the records displayed within JavaNews. You can do this by 
+double-clicking on an entry that is showing a recognised link, discovered link 
+or a received message. The details you can see depends on the type of entry you 
+selected, whether messages or links.</p>
+<h4>Recognised &amp; discovered links</h4>
+<p>If you double-click on a link (listed in the two table on the right-hand side 
+of the JavaNews window) which is either recognised (top) or discovered (bottom) 
+then you will see more information about the link displayed in a window like 
+this:</p>
+	<div class="centered">
+		<img alt="Detailed link information screen" height="240" src="resources/guicomdata-link.png" width="423" />
+	</div>
+<p>Within this screen you can see the following information about the link:</p>
+<ul>
+	<li>The COM port the link is configured on</li>
+	<li>The PSE name the link is attached to</li>
+	<li>The link ID within the PSE</li>
+	<li>The details of the link</li>
+	<li>A description of the link</li>
+	<li>The current status of the link (link up, link down or unknown)</li>
+	<li>When the status of the link last changed</li>
+</ul>
+<p>You are also able to add and edit links but this is covered in the editing 
+records page which can be found <a href="guirecord.html">here</a>.</p>
+<h4>Received messages</h4>
+<p>The details of received messages show not only the information received from 
+the PSE but also related information. This information can include comments 
+about the message, the definition of the message received and when the message 
+was actually received.</p>
+	<div class="centered">
+		<img alt="Detailed message information screen" height="503" src="resources/guicomdata-message.png" width="637" />
+	</div>
+<p>To see the status of the link which generated this message you can click on the 
+&quot;Show Link&quot; button. This will display the link details screen shown previously.</p>
+<p>Should you wish to add a comment to the message you can click on the &quot;Add 
+Comment&quot; button. Doing this will display an input box where you can enter a 
+brief comment. The comment can be up-to 255 characters including spaces, more 
+than this will lead to the comment being truncated. Once you have finished 
+entering your comment, click on OK and the message will be displayed in the 
+table.</p>
+</div>
+</body>
+</html>

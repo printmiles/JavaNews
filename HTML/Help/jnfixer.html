@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JavaNews - JNFixer</title>
+<link rel="stylesheet" type="text/css" href="./resources/javanews.css" />
+</head>
+<body>
+<div class="title">
+<img src="./resources/JNHelpHeader.png" width="450" height="90" alt="JavaNews: Open Source PSE Monitoring"/>
+</div>
+<div class="subtitle">JNFixer</div>
+<div class="copyright">
+Copyright &copy; 2007-2009 Alexander J. Harris.<br />
+&nbsp;All rights reserved.</div>
+<div class="nav">
+<h2>Navigation</h2>
+<ul>
+  <li><a href="using.html">Home</a></li>
+  <li><a href="appendices.html">Appendices</a></li>
+  <li class="me"><a href="#">JNFixer</a></li>
+</ul>
+<h2>In This Section</h2>
+<ul>
+  <li><a href="appendixprefs.html">Preference Files</a></li>
+  <li><a href="appendixlogs.html">Log Files</a></li>
+  <li><a href="technicalinfo.html">Technical Information</a></li>
+</ul>
+<h2>General Information</h2>
+<ul>
+  <li><a href="about.html">About JavaNews</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+  <li><a href="license.html">Licensing Information</a></li>
+  <li><a href="using.html">Using JavaNews</a></li>
+</ul>
+</div>
+<div class="content">
+<p>It is possible to edit some data contained within the JavaNews application. 
+You can add comments to messages received through the message details window 
+(more about how to do this can be found <a href="guicomdata.html">here</a>). 
+Links can be edited, acknowledged and added through the link details window.</p>
+<p>JNFixer can be used to perform two functions. Import delimited (separated) 
+data into the main database and check the structure of the database that it 
+connects to.</p>
+<h3>Starting JNFixer</h3>
+<p>JNFixer is a small application designed to run through a command prompt (DOS 
+window). You will find an icon included in the start menu folder created through 
+the automated installation for Windows<sup> TM</sup> machines. Otherwise you will need to 
+execute the program manually by opening a command line window and entering the 
+following command: <code>java jnfixer.Main</code> this will launch the application.</p>
+<h4>Next steps</h4>
+<p>You will be asked to enter the name of the database for JNFixer to connect 
+to. This should be the name of the Data Source Name (DSN) of the database as you 
+have configured in the ODBC window.</p>
+<p>JNFixer will then connect to the database and examine the structure of the 
+tables and fields within each table. The database will be checked for compliance 
+against the structure shown in the Entity-Relationship (ER) diagram in the 
+technical information that can be found <a href="erdiagram.html">here</a>.</p>
+<div class="warning">
+<p>JNFixer will log into the database using the ID you specified in the ODBC configuration.</p>
+</div>
+<p>JNFixer will firstly look through the database for the tables named as shown in the ER diagram.
+If they cannot be found then they are added. This means that the user ID which 
+is used to connect to the database should have sufficient privileges to use the 
+CREATE TABLE command in SQL. If JNFixer can find the tables it will examine 
+their structure for the named fields of valid types for use with JavaNews. 
+Missing or fields of the wrong data type will be listed in the output.</p>
+<p><code>
+----------------------------------------------------------------<br/>
+EXAMINING DATABASE STRUCTURE - Please wait...<br/>
+----------------------------------------------------------------<br/>
+Found a table named: tblAckComments<br/>
+Found a table named: tblCodexLinks<br/>
+Found a table named: tblMessages<br/>
+Found a table named: tblNewLinks<br/>
+Found a table named: tblReceivedMessages<br/>
+Found tblAckComments - Examining contents<br/>
+Found tblCodexLinks - Examining contents<br/>
+Found tblNewLinks - Examining contents<br/>
+Could not find tblMessages - creating table - done.<br/>
+Found tblReceivedMessages - Examining contents<br/>
+----------------------------------------------------------------<br/>
+RESULTS SUMMARY:<br/>
+----------------------------------------------------------------<br/>
+&nbsp;<br/>
+MISSING TABLES:<br/>
+~~~~~~~~~~~~~~~<br/>
+tblMessages - replaced by JNFixer.<br/>
+&nbsp;<br/>
+INCORRECT FIELDS:<br/>
+~~~~~~~~~~~~~~~~~<br/>
+None<br/>
+----------------------------------------------------------------<br/>
+</code></p>
+<div class="warning"><p>JNFixer is not able to amend incorrect fields 
+	(attributes) within a table. You must consult the ER diagram to find the 
+	correct configuration needed for JavaNews and refer to your database 
+	vendor&#39;s documentation to find out how to correct the problem.</p></div>
+<p>As shown once JNFixer has checked the structure of the database it has 
+connected to and created any missing tables you are presented with a choice of 
+options. The second and third options show further information in the window and 
+return you to this menu. The first option will allow you to import batches of 
+records into the database. This is covered in the next section. The last option 
+allows you to exit JNFixer.</p>
+<div class="warning"><p>JNFixer does create indexes (primary keys) in each of 
+	the tables it recreates. However it does not recreate foreign keys between 
+	tables that are shown in the ER diagram. These are maintained by JavaNews 
+	itself and not essential to the database structure.</p>
+</div>
+<h3>Importing records using JNFixer</h3>
+<div class="warning"><p>You must ensure that all tables and fields are shown
+to be correct before attempting to import any data into them.</p></div>
+<p>You are able to import data into the JavaNews database from a text file. Data 
+can be imported into either the recognised links table or the message tables. 
+These are both additive functions so will only add the imported records to what 
+data is already contained within them, and won&#39;t delete or amend existing data.</p>
+<p>Once you have selected the table you wish to add data to you will be asked to 
+enter the full path of the file to be imported. Please note the manner in which 
+the path must be entered. You <strong>must</strong> use the correct format for 
+both the file name and the file contents for the import to work successfully.</p>
+<p><code>
+Please enter the full path of the file to import.<br/>
+The path should use either \\ or / to denote directories.<br/>
+i.e. C:\\JavaNews\\ImportMe.txt or C:/JavaNews/ImportMe.txt<br/>
+&nbsp;<br/>
+Press ENTER when finished.<br/>
+c:/jn install cd/jnfixer/Blank TXT Files/Severity 1 Messages.txt<br/>
+----------------------------------------------------------------<br/>
+Importing. Please wait...<br/>
+&nbsp;<br/>
+Imported 157 records.<br/>
+----------------------------------------------------------------<br/>
+</code></p>
+<p>Once you have entered the file path, you can hit ENTER and the total number of records 
+imported will be shown. You will then be taken back to the main menu of JNFixer.</p>
+<h3>Ensuring data is in the right format</h3>
+<p>Data can be imported into either the recognised links table (tblCodexLinks) or the 
+message definition table (tblMessages). You should use a spreadsheet or database 
+program to enter data into a file with these columns in the order shown below. 
+Each column&#39;s entry should be separated from the next with a semicolon (;) and 
+so in a raw text file the result should look like this:</p>
+<p><code>Column 1 contents;Column 2 contents;Column 3 contents</code></p>
+<p>Notice that spaces are allowed and that text doesn&#39;t require its own 
+delimiter (&quot; is sometimes used to mark the start and end of a section of text).</p>
+<div class="warning"><p>You might notice from the ER diagram that there is an ID field.<br/>
+	JNFixer generates these automatically with 32 character universally 
+	unique identifiers.</p></div>
+<h4>tblCodexLinks</h4>
+<ol>
+<li>COM Port Identifier</li>
+<li>PSE Name</li>
+<li>Link ID (Use ? for the PSE itself)</li>
+<li>Details</li>
+<li>Description</li>
+</ol>
+<h4>tblMessages</h4>
+<ol>
+<li>Severity - must be a number</li>
+<li>Keywords</li>
+<li>Definition</li>
+</ol>
+</div>
+</body>
+</html>
