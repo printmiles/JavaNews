@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="https://sites.google.com/site/printmiles/home/projects/javanews" href="JavaNews.jnlp">
+  <information>
+    <title>JavaNews</title>
+    <vendor>Alexander Harris</vendor>
+    <description>JavaNews PSE Monitoring Tool (JNLP Demo)</description>
+    <icon href="./jnIcon64.jpg"/>
+    <shortcut online="true">
+      <desktop/>
+      <menu submenu="JavaNews"/>
+    </shortcut>
+    <offline-allowed/>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <update check="background" policy="prompt-update"/>
+  <resources>
+    <j2se version="1.6+"/>
+    <jar href="JavaNews.jar"/>
+  </resources>
+  <jar href="https://sites.google.com/site/printmiles/home/projects/javanews/jcommon-1.0.12.jar" part="chart" download="lazy" main="false"/>
+  <jar href="https://sites.google.com/site/printmiles/home/projects/javanews/jfreechart-1.0.9.jar" part="chart" download="lazy" main="false"/>
+  <package name="org.jfree.*" recursive="true" part="chart" />
+  <application-desc main-class="javanews.run.RunJavaNews"/>
+</jnlp>
